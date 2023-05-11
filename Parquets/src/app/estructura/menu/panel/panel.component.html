@@ -1,0 +1,27 @@
+<div class="col-md-6 border border-4 border-dark rounded-3">
+  <form [formGroup]="myPanellForm">
+    <div class="input-group input-group-sm  m-2 p-2 w-40 ">
+      <label>Indica los m2 del suelo: </label>
+      <button class="btn ms-2 btn-warning" type="button" (click)="restar(myPanellForm.value.m2 ,'m2')">
+        -
+      </button>
+      <input type="number" class="form-control" [(ngModel)]="numM2" formControlName="m2" min="0">
+      <button class="btn  btn-warning" type="button" (click)="sumar('m2')">
+        +
+      </button>
+      <button type="button" class="btn rounded-5 " (click)="modal.open(contenido1)">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+          class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+          <path
+            d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+        </svg>
+      </button>
+      <ng-template #contenido1 let-modal>
+        <div class="border border-4 border-dark rounded-3 p-2">
+          <p>Calcula los m2 multiplicando el largo por el ancho del suelo.</p>
+        </div>
+
+      </ng-template>
+    </div>
+  </form>
+</div>

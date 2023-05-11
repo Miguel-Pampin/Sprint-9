@@ -1,0 +1,40 @@
+
+.navbar {
+  display: flex;
+  align-items: center;
+  background-image: url(../../../../../assets/5.jpg);
+}
+a{
+  color: rgb(234, 172, 15);
+  background-color: black;
+  box-shadow: 10em;
+  border-radius:120px;
+  white-space: nowrap;
+
+}
+a:hover{
+  color: aliceblue;
+  text-shadow: 0 0 0.2em rgb(223, 109, 22), 0 0 0.2em ;
+}
+
+.navbar-brand {
+  margin-right: 1rem;
+  background-color: transparent;
+}
+
+.navbar-nav {
+  display: flex;
+  background-color: transparent;
+ margin-left: 30%;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 1rem;
+  background-color: transparent;
+}
+img{
+  border-radius:120px;
+  width: 200px;
+  height: 80px;
+}
+

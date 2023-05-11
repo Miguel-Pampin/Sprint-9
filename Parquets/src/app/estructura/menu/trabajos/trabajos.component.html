@@ -1,0 +1,14 @@
+<app-menu></app-menu>
+<div class="gallery">
+  <div *ngFor="let img of images" class="thumbnail thumbnail-small" (click)="openModal(img)">
+    <img [src]="img" alt="Reparación" class="img-fluid w-100">
+  </div>
+
+  <div class="modal" [hidden]="!modalOpen">
+    <div class="modal-content">
+      <img [src]="selectedImage?.url" alt="reparación" class="img-fluid w-100">
+      <button (click)="closeModal()">Cerrar</button>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
