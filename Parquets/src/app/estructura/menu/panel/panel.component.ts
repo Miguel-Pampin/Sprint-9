@@ -24,23 +24,22 @@ export class PanelComponent implements OnInit {
   });
   ngOnInit() {}
   numM2: number = 0;
-  
 
   panelPrice() {
-    this.PreciosService.totalPanel = (this.numM2 ) * 30;
+    this.PreciosService.totalPanel = this.numM2 * 30;
   }
 
   sumar(campo: string) {
-    if (campo === 'paginas') {
+    if (campo === 'parquet') {
       this.numM2++;
-    } 
+    }
     this.panelPrice();
   }
 
   restar(valor: number, campo: string) {
-    if (valor > 0 && campo === 'paginas') {
+    if (valor > 0 && campo === 'parquet') {
       this.numM2--;
-    } 
+    }
 
     this.panelPrice();
   }

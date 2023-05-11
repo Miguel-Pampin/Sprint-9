@@ -37,4 +37,14 @@ img{
   width: 200px;
   height: 80px;
 }
-
+.weather {
+  background-color: #2b2323bc;
+  color: aliceblue;
+ margin-right: 1em;
+   border-radius: 15px;
+  size: 5em;
+  padding: 0.25em;
+}
+h5{
+  color: rgb(194, 154, 11);
+}

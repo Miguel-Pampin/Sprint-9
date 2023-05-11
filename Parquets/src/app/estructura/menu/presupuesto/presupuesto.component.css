@@ -10,9 +10,10 @@
     background-color: black;
     color: aliceblue;
     margin-bottom: 15px;
- 
+
 }
 .imagebg{
     background-image: url(../../../../assets/5.jpg);
+    height: 55em;
+    width: 100%;
 }
-  

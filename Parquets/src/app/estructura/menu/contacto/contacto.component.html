@@ -1,45 +1,45 @@
 <app-menu></app-menu>
-<div class="contacto ">
+<div class="container-fluid contacto ">
   <div class="card">
-<div class="jumbotron jumbotron-fluid text-center text-white">
-    <div class="container">
-      <h1 class="display-5">Contacte con nosotros</h1>
+    <div class="jumbotron jumbotron-fluid text-center text-white">
+      <div class="container">
+        <h1 class="display-5">Contacte con nosotros</h1>
+      </div>
     </div>
-  </div>
-  
-  <div class="container mt-1 p-5 font-weight-bold">
-    <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
-      <div class="form-group" >
-        <label for="name">Nombre completo</label>
-        <input required #name="ngModel" ngModel type="text" class="form-control" name="name">
-        <span *ngIf="name.invalid && name.touched" class="error">Su nombre es requerido</span>
-      </div>
-    
-      <div class="form-group">
-        <label for="email">Correo electrónico</label>
-        <input required #email="ngModel" email ngModel type="email" class="form-control" name="email">
-        <span *ngIf="email.invalid && email.touched" class="error">El correo es requerido</span>
-      </div>
-    
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="telefono">Teléfono</label>
-          <input type="number" class="form-control" name="telefono">
+
+    <div class="container mt-1 p-5 font-weight-bold">
+      <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+        <div class="form-group">
+          <label for="name">Nombre completo</label>
+          <input required #name="ngModel" ngModel type="text" class="form-control" name="name">
+          <span *ngIf="name.invalid && name.touched" class="error">Su nombre es requerido</span>
         </div>
-      </div>
-    
-      <div class="form-group">
-        <label for="Mensaje">Mensaje</label>
-        <textarea required #mensaje="ngModel" ngModel type="text" class="form-control" name="Mensaje"></textarea>
-        <span *ngIf="mensaje.invalid && mensaje.touched" class="error">Por favor indique su mensaje</span>
-      </div>
-    
-     
-      <button type="submit" class="btn btn-success"> 
-      <i class="fa fa-send"></i> Enviar
-      </button>
-    </form>
+
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input required #email="ngModel" email ngModel type="email" class="form-control" name="email">
+          <span *ngIf="email.invalid && email.touched" class="error">El correo es requerido</span>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="telefono">Teléfono</label>
+            <input type="number" class="form-control" name="telefono">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="Mensaje">Mensaje</label>
+          <textarea required #mensaje="ngModel" ngModel type="text" class="form-control" name="Mensaje"></textarea>
+          <span *ngIf="mensaje.invalid && mensaje.touched" class="error">Por favor indique su mensaje</span>
+        </div>
+
+
+        <button type="submit" class="btn btn-success">
+          <i class="fa fa-send"></i> Enviar
+        </button>
+      </form>
     </div>
   </div>
-  </div>
+</div>
 <app-footer></app-footer>
